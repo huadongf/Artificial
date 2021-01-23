@@ -16,8 +16,8 @@ public enum ErrorCodeEnum implements ErrorCode {
     SYSTEM_ERROR(999, "system error", "系统错误"),
 
             ;
-    private Integer code;
-    private String desc;
+    private final Integer code;
+    private final String desc;
     private String descCN;
 
     ErrorCodeEnum(Integer code, String desc) {

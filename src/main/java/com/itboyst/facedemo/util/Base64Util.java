@@ -29,8 +29,7 @@ public class Base64Util {
         }
         String base64Process = base64Process(base64);
 
-        byte[] decode = Base64.getDecoder().decode(base64Process);
-        return decode;
+        return Base64.getDecoder().decode(base64Process);
 
 
     }

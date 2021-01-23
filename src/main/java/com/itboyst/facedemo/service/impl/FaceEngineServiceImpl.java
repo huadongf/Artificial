@@ -295,9 +295,9 @@ public class FaceEngineServiceImpl implements FaceEngineService {
 
     private class CompareFaceTask implements Callable<List<UserCompareInfo>> {
 
-        private List<UserRamCache.UserInfo> userInfoList;
-        private FaceFeature targetFaceFeature;
-        private float passRate;
+        private final List<UserRamCache.UserInfo> userInfoList;
+        private final FaceFeature targetFaceFeature;
+        private final float passRate;
 
 
         public CompareFaceTask(List<UserRamCache.UserInfo> userInfoList, FaceFeature targetFaceFeature, float passRate) {
