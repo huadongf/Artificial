@@ -1,11 +1,9 @@
 package com.itboyst.facedemo.rpc;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
-/**
- * @Author: st7251
- * @Date: 2018/11/23 14:18
- */
+@EqualsAndHashCode(callSuper = true)
 @Data
 public class BusinessException extends RuntimeException {
     private ErrorCode errorCode;

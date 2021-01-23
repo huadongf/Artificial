@@ -4,10 +4,6 @@ package com.itboyst.facedemo.enums;
 import com.itboyst.facedemo.rpc.ErrorCode;
 import lombok.Getter;
 
-/**
- * @author st7251
- * @date 2019/7/2 14:28
- */
 @Getter
 public enum ErrorCodeEnum implements ErrorCode {
 

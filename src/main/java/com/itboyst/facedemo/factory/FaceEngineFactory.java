@@ -13,17 +13,15 @@ import org.apache.commons.pool2.impl.DefaultPooledObject;
 @Slf4j
 public class FaceEngineFactory extends BasePooledObjectFactory<FaceEngine> {
 
-    private String libPath;
-    private String appId;
-    private String sdkKey;
-    private String activeKey;
-    private EngineConfiguration engineConfiguration;
+    private final String libPath;
+    private final String appId;
+    private final String sdkKey;
+    private final EngineConfiguration engineConfiguration;
 
 
     public FaceEngineFactory(String libPath, String appId, String sdkKey, String activeKey, EngineConfiguration engineConfiguration) {
         this.appId = appId;
         this.sdkKey = sdkKey;
-        this.activeKey = activeKey;
         this.libPath = libPath;
         this.engineConfiguration = engineConfiguration;
     }

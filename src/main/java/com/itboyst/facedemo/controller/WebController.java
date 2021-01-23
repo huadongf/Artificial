@@ -4,10 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-/**
- * @author st7251
- * @date 2020/3/12 9:26
- */
+
 @Controller
 public class WebController {
 

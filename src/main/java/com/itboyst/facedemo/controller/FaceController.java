@@ -19,10 +19,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Controller;
-import org.springframework.util.ResourceUtils;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+
 import javax.annotation.PostConstruct;
-import java.io.*;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
 
@@ -40,7 +44,7 @@ public class FaceController {
 
     //初始化注册人脸，注册到本地内存
     @PostConstruct
-    public void initFace() throws FileNotFoundException {
+    public void initFace() {
         Map<String, String> fileMap = Maps.newHashMap();
         fileMap.put("zhao1", "赵丽颖");
         fileMap.put("yang1", "杨紫");
@@ -50,7 +54,7 @@ public class FaceController {
             InputStream inputStream = null;
             try {
                 inputStream = resource.getInputStream();
-            } catch (IOException e) {
+            } catch (IOException ignored) {
             }
             ImageInfo rgbData = ImageFactory.getRGBData(inputStream);
             List<FaceInfo> faceInfoList = faceEngineService.detectFaces(rgbData);

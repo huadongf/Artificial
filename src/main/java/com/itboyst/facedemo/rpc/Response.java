@@ -2,10 +2,6 @@ package com.itboyst.facedemo.rpc;
 
 import lombok.Data;
 
-/**
- * @Author: st7251
- * @Date: 2018/11/23 14:40
- */
 @Data
 public class Response<T> {
 
@@ -33,7 +29,7 @@ public class Response<T> {
         Response<T> response = new Response<T>();
         response.setCode(code);
         response.setMsg(message);
-        if (data != null && data instanceof String && "".equals(data)) {
+        if (data instanceof String && "".equals(data)) {
             response.setData(null);
         } else {
             response.setData(data);
