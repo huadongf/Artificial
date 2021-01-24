@@ -4,10 +4,6 @@ import org.springframework.util.StringUtils;
 
 import java.util.Base64;
 
-/**
- * @author st7251
- * @date 2020/3/13 9:23
- */
 public class Base64Util {
     public static String base64Process(String base64Str) {
         if (!StringUtils.isEmpty(base64Str)) {
